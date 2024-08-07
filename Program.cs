@@ -6,7 +6,7 @@
 
         static void Main()
         {
-            LoadData("MOCK_DATA.csv");
+            LoadData("CONTACTS.csv");
             bool exit = false;
 
             while (!exit)
@@ -25,7 +25,7 @@
                         SearchUser();
                         break;
                     case "4":
-                        SaveData("MOCK_DATA.csv");
+                        SaveData("CONTACTS.csv");
                         exit = true;
                         break;
                     default:
