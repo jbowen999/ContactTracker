@@ -11,7 +11,7 @@
 
             while (!exit)
             {
-                Console.WriteLine("Options: 1. Add User 2. Delete User 3. Search User 4. Exit");
+                Console.WriteLine("Options:\n1. Add User \n2. Delete User \n3. Search User \n4. Exit");
                 var choice = Console.ReadLine();
                 switch (choice)
                 {
@@ -81,13 +81,13 @@
             try
             {
                 Console.WriteLine("Enter last name:");
-                string lastName = Console.ReadLine();
+                string? lastName = Console.ReadLine();
                 Console.WriteLine("Enter first name:");
-                string firstName = Console.ReadLine();
+                string? firstName = Console.ReadLine();
                 Console.WriteLine("Enter email:");
-                string email = Console.ReadLine();
+                string? email = Console.ReadLine();
                 Console.WriteLine("Enter phone:");
-                string phone = Console.ReadLine();
+                string? phone = Console.ReadLine();
 
                 if (!User.ValidateName(lastName) || !User.ValidateName(firstName))
                 {
@@ -126,7 +126,7 @@
         static void DeleteUser()
         {
             Console.WriteLine("Enter phone number of user to delete:");
-            string phone = Console.ReadLine();
+            string? phone = Console.ReadLine();
 
             if (userTree.Remove(phone))
             {
@@ -141,9 +141,9 @@
         static void SearchUser()
         {
             Console.WriteLine("Search by 1. Last Name 2. First Name");
-            string choice = Console.ReadLine();
+            string? choice = Console.ReadLine();
             Console.WriteLine("Enter name:");
-            string name = Console.ReadLine().ToLower();
+            string? name = Console.ReadLine().ToLower();
 
             List<User> results = new List<User>();
 
